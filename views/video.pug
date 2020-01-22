@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+    h1.title HERE ARE THE TOP 10 SEARCHES FOR 
+    h1.title.searchKey #{searchKey.toUpperCase()}
+
+    .videos
+        each video in results
+            .container-video
+                .thumbnail
+                    img(src=`${video.thumbnails.medium.url}`)
+                .info 
+                    h3
+                        a(href=`https://www.youtube.com/watch?v=${video.id}` target='_blank') #{video.title.toUpperCase()}
+                    strong Channel: 
+                    a(href=`https://www.youtube.com/channel/${video.channel.id}` target='_blank') #{video.channel.title}
+                    br
+                    strong Published: 
+                    | #{video.publishedAt}
+    

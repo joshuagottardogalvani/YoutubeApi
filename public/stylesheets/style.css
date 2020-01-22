@@ -1,8 +1,72 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 25px;
+  background: #3B3B3B;
 }
 
-a {
-  color: #00B7FF;
+html {
+    font-family: 'Montserrat', 'sans-serif';
+    color: white;
+    line-height: 2em;
+}
+
+a, .t, .searchKey {
+  color: #ee0f0f;
+}
+
+.title {
+    display: inline;
+}
+
+.videos {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.container-video {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow:
+        -12px -12px 12px 0 rgba(77, 77, 77, 0.7),
+        12px 12px 12px 0 rgba(20, 20, 20, 0.7);
+}
+
+.date, p {
+    color: rgb(155, 155, 155);
+}
+
+input {
+    margin-top: 30px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+    border: 3px solid #ee0f0f;
+    width: 50%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.myButton {
+	background:linear-gradient(to bottom, #ee0f0f 5%, #b81111 100%);
+	background-color:#ee0f0f;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+    font-family: 'MontSerrat', 'sans-serif';
+	color: white;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+    border: #ee0f0f;
+    margin-top: 30px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #8f0000 5%, #8f0000 100%);
 }

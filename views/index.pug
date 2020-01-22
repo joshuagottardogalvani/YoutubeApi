@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h1 WHAT ARE YOU LOOKING FOR?
+    form(action='/search', method='POST')
+        input(type='text', id="search", name='search')
+        br
+        button.myButton(type='submit') SEARCH
