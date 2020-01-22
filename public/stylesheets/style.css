@@ -10,7 +10,8 @@ html {
 }
 
 a, .t, .searchKey {
-  color: #ee0f0f;
+    color: #ee0f0f;
+    text-decoration: none;
 }
 
 .title {
@@ -25,13 +26,14 @@ a, .t, .searchKey {
 }
 
 .container-video {
-    padding: 20px;
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     box-shadow:
-        -12px -12px 12px 0 rgba(77, 77, 77, 0.7),
-        12px 12px 12px 0 rgba(20, 20, 20, 0.7);
+    -12px -12px 12px 0 rgba(77, 77, 77, 0.7),
+    12px 12px 12px 0 rgba(20, 20, 20, 0.7);
 }
+
 
 .date, p {
     color: rgb(155, 155, 155);
@@ -41,19 +43,18 @@ input {
     margin-top: 30px;
     padding: 5px 10px;
     box-sizing: border-box;
+    width: 250px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    font-family: 'Montserrat', 'sans-serif';
 }
 
 input:focus {
     border: 3px solid #ee0f0f;
     width: 50%;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
 }
 
 .myButton {
-	background:linear-gradient(to bottom, #ee0f0f 5%, #b81111 100%);
 	background-color:#ee0f0f;
 	border-radius:8px;
 	display:inline-block;
@@ -66,7 +67,25 @@ input:focus {
 	text-decoration:none;
     border: #ee0f0f;
     margin-top: 30px;
+    width: 250px;
 }
+
 .myButton:hover {
 	background:linear-gradient(to bottom, #8f0000 5%, #8f0000 100%);
+}
+
+.center {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+    .videos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .container-video {
+       grid-template-columns: 1fr;
+    }
 }
